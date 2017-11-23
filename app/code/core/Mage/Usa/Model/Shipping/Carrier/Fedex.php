@@ -254,7 +254,7 @@ class Mage_Usa_Model_Shipping_Carrier_Fedex
         $r->setDestCountry(Mage::getModel('directory/country')->load($destCountry)->getIso2Code());
 
         if ($request->getDestPostcode()) {
-            $r->setDestPostal($request->getDestPostcode());
+            $r->setDestPostal(trim($request->getDestPostcode()));
         } else {
 
         }
